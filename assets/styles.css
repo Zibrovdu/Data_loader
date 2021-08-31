@@ -1,0 +1,147 @@
+.bg_color {
+    background: '#ebecf1';
+}
+
+body {
+    background-color: #ebecf1;
+}
+
+.banner {
+    height: 75px;
+    width/max-width: 1800px;
+    margin: 0 auto;
+    background-color: #1959d1;
+    border-radius: 2px;
+    font-size: 2em;
+}
+
+.banner h2{
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    margin-left: 2%;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #ebecf1;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.banner Img{
+    position: relative;
+    float: right;
+    right: 10px;
+    height: 75px;
+}
+
+.div_etsp {
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    width: auto;
+    height: 200px;
+    margin: 25px 15px;
+}
+
+.label_etsp {
+    font-size: 30px;
+}
+
+.div_label_etsp {
+    width: 370px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.img_etsp {
+    height: 100px;
+}
+
+.div_img_etsp {
+    float: right;
+    display: block;
+}
+
+.input_etsp_link {
+    height: 25px;
+    margin: 10px 21px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.button_load_etsp {
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.div_lbl_btn {
+    display: inline-block;
+}
+
+/*
+.btn_load {
+    width: 270px;
+    height: 46px;
+}
+
+.btn_load:active {
+    color: #fb4c1f;
+    background: #95bddc;
+    text-decoration: bold;
+}
+
+button {
+    height: 40px;
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: arial;
+    color: #1959d1;
+}
+.inputs {
+    padding: 10px;
+    width: 430px;
+    font-size: 17px;
+}
+
+.div_btn_inp {
+    display: block;
+    position: relative;
+    width: 460px;
+    padding: 50px 30px;
+    float: left;
+}
+
+.div_span {
+    display: block;
+    position: relative;
+    width: 400px;
+    padding: 70px 1px;
+    float: left;
+}
+
+.div_spans {
+    float: left;
+    position: relative;
+    width: 500px;
+    padding: 30px;
+}
+
+
+}
