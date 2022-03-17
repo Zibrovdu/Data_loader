@@ -31,32 +31,19 @@ def serve_layout():
                                 html.Div([
                                     html.Div([
                                         html.Label(
-                                            'Единый центр поддержки',
+                                            'Единый центр поддержки (Ростелеком)',
                                             className='label_etsp'
-                                            # style=dict(
-                                            #     fontSize='30px'
-                                            # )
                                         ),
                                     ],
                                         className='div_label_etsp'
-                                        # style=dict(
-                                        #     padding='20px',
-                                        #     width='370px',
-                                        #     display='inline-block'
-                                        # )
                                     ),
                                     html.Div([
                                         html.Img(
                                             src='assets/img/rtk.png',
                                             className='img_etsp'
-                                            # style=dict(height='100px')
                                         )
                                     ],
                                         className='div_img_etsp'
-                                        # style=dict(
-                                        #     width='200px',
-                                        #     float='right',
-                                        #     display='inline-block')
                                     ),
                                     html.Div([
                                         html.Div([
@@ -77,17 +64,253 @@ def serve_layout():
                                         ],
                                             className='div_lbl_btn'
                                         )
-                                    ])
+                                    ]),
+                                    html.Div([
+                                        dcc.Loading(id='load_etsp',
+                                                    children=[
+                                                        html.Div([
+                                                            html.Label(
+                                                                id='lbl_etsp_file_load'
+                                                            )
+                                                        ],
+                                                            className='div_lbl_btn'
+                                                        ),
+                                                        html.Table([
+                                                            html.Th([
+                                                                html.Label('Параметр')
+                                                            ]),
+                                                            html.Th([
+                                                                html.Label('Значение')
+                                                            ]),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label('Записей в БД на текущий момент')
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(id='curr_count_rows_etsp')
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label('Записей в загруженном файле')
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(id='count_rows_in_file_etsp')
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label(
+                                                                        'Итого записей'
+                                                                    )
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(
+                                                                        id='total_curr_rows_etsp'
+                                                                    )
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                        ]), ])
+                                    ],
+                                        className='div_table'
+                                    )
                                 ],
                                     className='div_etsp'
-                                    # style=dict(
-                                    #     border='1px solid darkblue',
-                                    #     borderRadius='10px',
-                                    #     width='auto',
-                                    #     height='400px',
-                                    #     margin='25px 15px'
-                                    # )
-                                )
+                                ),
+                                html.Div([
+                                    html.Div([
+                                        html.Label(
+                                            'Система управления и эксплуатации (СУЭ)',
+                                            className='label_etsp'
+                                        ),
+                                    ],
+                                        className='div_label_etsp'
+                                    ),
+                                    html.Div([
+                                        html.Img(
+                                            src='assets/img/sue.png',
+                                            className='img_sue'
+                                        )
+                                    ],
+                                        className='div_img_etsp'
+                                    ),
+                                    html.Div([
+                                        html.Div([
+                                            dcc.Input(
+                                                id='sue_link_input',
+                                                placeholder='Вставьте ссылку на файл с данными СУЭ',
+                                                className='input_etsp_link'
+                                            )
+                                        ],
+                                            className='div_lbl_btn'
+                                        ),
+                                        html.Div([
+                                            html.Button(
+                                                'Загрузить',
+                                                id='load_sue_file_button',
+                                                className='button_load_sue'
+                                            )
+                                        ],
+                                            className='div_lbl_btn'
+                                        )
+                                    ]),
+
+                                    html.Div([
+                                        dcc.Loading(id='load_sue',
+                                                    children=[
+                                                        html.Div([
+                                                            html.Label(
+                                                                id='lbl_sue_file_load'
+                                                            )
+                                                        ],
+                                                            className='div_lbl_btn'
+                                                        ),
+                                                        html.Table([
+                                                            html.Th([
+                                                                html.Label('Параметр')
+                                                            ]),
+                                                            html.Th([
+                                                                html.Label('Значение')
+                                                            ]),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label('Записей в БД на текущий момент')
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(id='curr_count_rows_sue')
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label('Записей в загруженном файле')
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(id='count_rows_in_file_sue')
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                            html.Tr([
+                                                                html.Td([
+                                                                    html.Label('Итого записей')
+                                                                ]),
+                                                                html.Td([
+                                                                    html.Label(
+                                                                        id='total_curr_rows_sue'
+                                                                    )
+                                                                ]),
+                                                            ],
+                                                            ),
+                                                        ]), ])
+                                    ],
+                                        className='div_table'
+                                    )
+
+                                ],
+                                    className='div_sue'
+                                ),
+                                html.Div([
+                                    html.Div([
+                                        html.Label(
+                                            'Отдел сопровождения пользователей (ОСП)',
+                                            className='label_etsp'
+                                        ),
+                                    ],
+                                        className='div_label_etsp'
+                                    ),
+                                    html.Div([
+                                        html.Img(
+                                            src='assets/img/osp.png',
+                                            className='img_sue'
+                                        )
+                                    ],
+                                        className='div_img_etsp'
+                                    ),
+                                    html.Div([
+                                        html.Div([
+                                            dcc.Input(
+                                                id='osp_link_input',
+                                                placeholder='Вставьте ссылку на файл с данными СУЭ',
+                                                className='input_etsp_link'
+                                            )
+                                        ],
+                                            className='div_lbl_btn'
+                                        ),
+                                        html.Div([
+                                            html.Button(
+                                                'Загрузить',
+                                                id='load_osp_file_button',
+                                                className='button_load_sue'
+                                            )
+                                        ],
+                                            className='div_lbl_btn'
+                                        )
+                                    ]),
+                                    html.Div([
+                                        dcc.Loading(id='load_osp', children=[
+                                            html.Div([
+                                                html.Label(
+                                                    id='lbl_osp_file_load'
+                                                )
+                                            ],
+                                                className='div_lbl_btn'
+                                            ),
+                                            html.Table([
+                                                html.Th([
+                                                    html.Label('Параметр')
+                                                ]),
+                                                html.Th([
+                                                    html.Label('Значение')
+                                                ]),
+                                                html.Tr([
+                                                    html.Td([
+                                                        html.Label('Записей в БД на текущий момент')
+                                                    ]),
+                                                    html.Td([
+                                                        html.Label(id='curr_count_rows_osp')
+                                                    ]),
+                                                ],
+                                                ),
+                                                html.Tr([
+                                                    html.Td([
+                                                        html.Label('Записей в загруженном файле')
+                                                    ]),
+                                                    html.Td([
+                                                        html.Label(id='count_rows_in_file_osp')
+                                                    ]),
+                                                ],
+                                                ),
+                                                html.Tr([
+                                                    html.Td([
+                                                        html.Label(
+                                                            'Итого записей'
+                                                        )
+                                                    ]),
+                                                    html.Td([
+                                                        html.Label(
+                                                            id='total_curr_rows_osp'
+                                                        )
+                                                    ]),
+                                                ],
+                                                ),
+                                            ]), ])
+                                    ],
+                                        className='div_table'
+                                    )
+
+                                ],
+                                    className='div_osp'
+                                ),
+                                html.Div([
+                                    html.Div([
+                                        html.Button('Обработать все файлы', id='all_files', className='btn_all_files')
+                                    ])
+                                ],
+                                         className='div_osp'
+                                         )
                             ])
 
                         ],
